@@ -35,6 +35,7 @@ X, y = load_breast_cancer(return_X_y=True)
 
 
 def objective():
+    # Resolve proxies to trial values (must be inside objective, not at module level)
     LR = float(lr)
     MAX_DEPTH = int(max_depth)
     N_ESTIMATORS = int(n_estimators)
@@ -92,6 +93,7 @@ lgbm_classifier:                 # must match the source filename stem
 
 ```python
 def objective():
+    # Resolve proxies to trial values (must be inside objective, not at module level)
     LR = float(lr)
     MAX_DEPTH = int(max_depth)
     ...
